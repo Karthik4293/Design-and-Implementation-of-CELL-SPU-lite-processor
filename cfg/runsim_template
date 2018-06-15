@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+rm -rf work
+vlib work
+vlog +acc ../rtl/defines_pkg.sv
+vlog +acc ../rtl/fetch.sv
+vlog +acc ../rtl/decode.sv
+vlog +acc ../rtl/even_pipe.sv
+vlog +acc ../rtl/reg_file.sv
+vlog +acc ../rtl/fw_macro.sv
+vlog +acc ../rtl/odd_pipe.sv
+vlog +acc ../rtl/spu_pipes_top.sv
+vlog +acc ../rtl/spu_top.sv
+vlog +acc ../rtl/local_store.sv
+vlog +acc ../rtl/dependency.sv
+vlog +acc ../tb/spu_pipes_tb.sv
+vlog +acc ../tb/spu_tb.sv
+vsim -c {ARG0} -do "run -all; quit"

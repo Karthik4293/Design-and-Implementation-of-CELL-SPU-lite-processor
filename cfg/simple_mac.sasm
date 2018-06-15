@@ -1,0 +1,19 @@
+ila 7,$2
+ila 2,$3
+ila 2,$4
+ila 0,$5
+lqd 0,$5,$6
+a $4,$6,$7
+mpya $6,$2,$3,$4
+stqd 64,$5,$6
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+stop

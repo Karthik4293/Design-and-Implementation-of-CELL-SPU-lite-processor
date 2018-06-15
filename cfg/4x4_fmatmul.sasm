@@ -1,0 +1,42 @@
+ila 992,$3
+ila 1056,$4
+ila 1120,$5
+brsl 15,$lr
+nop
+lnop
+nop
+lnop
+nop
+lnop
+nop
+lnop
+nop
+lnop
+nop
+lnop
+nop
+stop
+lqd 0,$3,$6
+lqd 0,$4,$7
+fm $6,$7,$8
+lqd 1,$3,$6
+lqd 1,$4,$7
+fma $8,$7,$6,$8
+lqd 2,$3,$6
+lqd 2,$4,$7
+fma $8,$7,$6,$8
+lqd 3,$3,$6
+lqd 3,$4,$7
+fma $8,$7,$6,$8
+stqd 0,$5,$8
+bi $lr
+nop
+lnop
+nop
+lnop
+nop
+lnop
+nop
+lnop
+nop
+lnop

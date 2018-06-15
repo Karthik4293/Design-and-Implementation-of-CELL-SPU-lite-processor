@@ -1,0 +1,33 @@
+ila 4096,$lr
+ila 4080,$sp
+stqd -16,$sp,$lr 
+stqd -32,$sp,$sp
+ai -32,$sp,$sp
+ila 5,$3
+brsl 10,$lr
+ai 0,$3,$5
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+stop
+stqd -16,$sp,$lr 
+stqd -32,$sp,$sp
+ai -32,$sp,$sp
+stqd 32,$sp,$3
+ceqi 0,$3,$4
+brnz 31,$4 
+ai -1,$3,$3
+brsl -7,$lr
+lqd 32,$sp,$5
+mpy $3,$5,$3
+ai 32,$sp,$sp
+lqd 16,$sp,$lr
+bi $lr
+il 1,$3
+ai 32,$sp,$sp
+bi $lr
